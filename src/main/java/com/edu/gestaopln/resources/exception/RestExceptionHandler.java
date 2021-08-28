@@ -12,9 +12,7 @@ public class RestExceptionHandler {
 
     @ExceptionHandler(ResourceNotFoundException.class)
     public ResponseEntity handlerResourceNotFoundException(ResourceNotFoundException ex) {
-        System.out.println("Entrei Expcetion !!!");
         HandlerExceptions handlerExceptions = new HandlerExceptions();
-        handlerExceptions.setTitulo("Registro não encontrado.");
         handlerExceptions.setDetalhe(ex.getMensagem());
         handlerExceptions.setStatus(HttpStatus.NOT_FOUND.toString());
         handlerExceptions.setClasse(ResourceNotFoundException.class.getName());
