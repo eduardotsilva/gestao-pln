@@ -33,4 +33,8 @@ public class FuncaoService {
                 }).orElseThrow(() -> new ResourceNotFoundException(HttpStatus.NOT_FOUND, "Função de ID " + id + " não encontrada!"));
     }
 
+    public void delete(Long id){
+        funcaoRepository.deleteById(id);
+    }
+
 }

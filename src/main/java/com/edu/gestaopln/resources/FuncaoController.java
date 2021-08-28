@@ -12,7 +12,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
 
@@ -39,8 +38,14 @@ public class FuncaoController {
 
     @PutMapping(value = "/{id}")
     public ResponseEntity<Funcao> update(@PathVariable Long id, @RequestBody Funcao funcao) {
-        Funcao funcaoAtualizada = funcaoService.update(id, funcao);
+        Funcao funcaoUpd = funcaoService.update(id, funcao);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    }
+
+    @DeleteMapping
+    public ResponseEntity<Funcao> delete(@PathVariable Long id) {
+        funcaoService.delete(id);
+        return ResponseEntity.noContent().build();
     }
 
 
