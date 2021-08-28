@@ -1,4 +1,4 @@
-package com.edu.safirapln;
+package com.edu.gestaopln;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

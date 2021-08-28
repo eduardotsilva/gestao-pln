@@ -1,6 +1,6 @@
-package com.edu.safirapln.model.repository;
+package com.edu.gestaopln.repository;
 
-import com.edu.safirapln.model.entity.Funcional;
+import com.edu.gestaopln.entity.Funcional;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface FuncionalRepository extends JpaRepository<Funcional, Long> {

@@ -1,4 +1,4 @@
-package com.edu.safirapln.model.entity;
+package com.edu.gestaopln.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,23 +8,24 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.io.Serializable;
 
-@Entity(name = "tbPrograma")
+@Entity(name = "tbSubPrograma")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
-public class Programa implements Serializable {
+public class SubPrograma implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(length = 150, nullable = false)
-    private String programaNome;
+    private String subProgramaNome;
 
-    @Column(length = 4, nullable = false)
-    private String programaCodigo;
+    @Column(length = 5, nullable = false)
+    private String subProgramaCodigo;
 
-
+    @ManyToOne(fetch = FetchType.EAGER)
+    private Programa programa;
 
 }

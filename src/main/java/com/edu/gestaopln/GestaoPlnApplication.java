@@ -1,4 +1,4 @@
-package com.edu.safirapln;
+package com.edu.gestaopln;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

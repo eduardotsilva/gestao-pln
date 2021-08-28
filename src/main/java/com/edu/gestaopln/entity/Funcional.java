@@ -1,4 +1,4 @@
-package com.edu.safirapln.model.entity;
+package com.edu.gestaopln.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
