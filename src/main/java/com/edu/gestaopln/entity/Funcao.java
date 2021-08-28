@@ -19,7 +19,7 @@ public class Funcao implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    
     @Column(length = 200, nullable = false)
     private String funcaoNome;
 
