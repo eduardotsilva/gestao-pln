@@ -2,7 +2,7 @@ package com.edu.gestaopln.service;
 
 import com.edu.gestaopln.entity.Funcao;
 import com.edu.gestaopln.repository.FuncaoRepository;
-import com.edu.gestaopln.service.exception.ResourceNotFoundException;
+import com.edu.gestaopln.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

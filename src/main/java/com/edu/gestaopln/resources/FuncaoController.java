@@ -13,6 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import javax.validation.Valid;
 import java.net.URI;
 
 @RestController
@@ -30,7 +31,7 @@ public class FuncaoController {
     }
 
     @PostMapping
-    public ResponseEntity<Funcao> create(@RequestBody Funcao funcao) {
+    public ResponseEntity<Funcao> create(@RequestBody @Valid Funcao funcao) {
         Funcao funcaoSaved = funcaoService.create(funcao);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(funcaoSaved.getId()).toUri();
         return ResponseEntity.created(uri).build();

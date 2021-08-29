@@ -1,4 +1,4 @@
-package com.edu.gestaopln.service.exception;
+package com.edu.gestaopln.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
